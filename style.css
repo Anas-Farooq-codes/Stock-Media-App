@@ -77,7 +77,7 @@
 --dark-primary: #4EDAD5;
 --dark-primary-container: #00504E;
 --dark-secondary: #FFB958;
---dark-secondary-container: #ac5000;
+--dark-secondary-container: #d16100;
 --dark-tertiary: #FFB3B0;
 --dark-tertiary-container: #891C23;
 --dark-error: #FFB4AB;
@@ -792,7 +792,7 @@ visibility: visible;
   bottom: 0;
   max-width: var(--navigation-drawer-width);
   width: 0;
-  z-index: 0;
+  z-index: 6;
   visibility: hidden;
   transition: var(--motion-duration-medium-1) var(--motion-easing-emphasized-accelerate);
   -webkit-transition: var(--motion-duration-medium-1) var(--motion-easing-emphasized-accelerate);
@@ -886,6 +886,38 @@ font-variation-settings: 'FILL' 1;
 /**
  * Button
  */
+
+.btn{
+  height: 40px;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 24px;
+  border-radius: var(--radius-full);
+  -webkit-border-radius: var(--radius-full);
+  -moz-border-radius: var(--radius-full);
+  -ms-border-radius: var(--radius-full);
+  -o-border-radius: var(--radius-full);
+  transition: box-shadow var(--motion-duration-short-2) var(--motion-easing-linear);
+  -webkit-transition: box-shadow var(--motion-duration-short-2) var(--motion-easing-linear);
+  -moz-transition: box-shadow var(--motion-duration-short-2) var(--motion-easing-linear);
+  -ms-transition: box-shadow var(--motion-duration-short-2) var(--motion-easing-linear);
+  -o-transition: box-shadow var(--motion-duration-short-2) var(--motion-easing-linear);
+}
+
+.btn:hover{
+box-shadow: var(--elevation-1);
+}
+
+.btn:focus {box-shadow: none};
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+
 
 
 /**
