@@ -64,7 +64,8 @@
         <div class="state-layer"></div>
       </button>
 
-      <a href="/" class="logo">PixVault</a>
+      <a href="index.html" class="logo"> <img src="logo dark.png" alt="logo" class="dark"></a>
+      <a href="index.html" class="logo"> <img src="logo light.png" alt="logo" class="light"></a>
 
       <div class="search-view" data-search-view>
         <div class="search-bar">
@@ -213,7 +214,8 @@
           <div class="state-layer"></div>
         </button>
 
-        <a href="" class="logo">PixVault</a>
+        <a href="index.html" class="logo"><img src="PIXVAULT dark.png" alt="logo" class="dark"></a>
+        <a href="index.html" class="logo"><img src="PIXVAULT light.png" alt="logo" class="light"></a>
       </div>
 
       <ul class="drawer-list">
@@ -547,158 +549,64 @@
 
     <h2 class="title-large section-title" id="featured-label">Featured Photos</h2>
 
-    <div class="media-grid" data-photo-grid>
+    <div class="media-grid" data-photo-grid></div>
 
-<div class="column">
+<div class="overlay-btn">
 
+  <a href="photos.html" class="btn btn-primary" data-ripple>
 
-      <div class="card grid-item" data-ripple>
+    <span class="label-large text">Explore More</span>
 
-        <figure class="card-banner" style="--width:160; --height:121;">
-        
-        <img src="card-media-1.jpg" width="160" height="121" loading="lazy" alt="card-media-1" class="img-cover">
-        </figure>
+    <div class="state-layer"></div>
+  </a>
 
-        <div class="card-content">
-
-          <button class="icon-btn small" aria-label="Add to favorite" data-ripple data-toggle-btn>
-
-            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
-
-            <div class="state-layer"></div>
-          </button>
-        </div>
-
-<a href="#" class="state-layer"></a>
-
-      </div>
-
-
-      <div class="card grid-item" data-ripple>
-
-        <figure class="card-banner" style="--width:160; --height:121;">
-        
-        <img src="card-media-1.jpg" width="160" height="121" loading="lazy" alt="card-media-1" class="img-cover">
-        </figure>
-
-        <div class="card-content">
-
-          <button class="icon-btn small" aria-label="Add to favorite" data-ripple data-toggle-btn>
-
-            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
-
-            <div class="state-layer"></div>
-          </button>
-        </div>
-
-<a href="#" class="state-layer"></a>
-
-      </div>
-
-
-      <div class="card grid-item" data-ripple>
-
-        <figure class="card-banner" style="--width:160; --height:121;">
-        
-        <img src="card-media-1.jpg" width="160" height="121" loading="lazy" alt="card-media-1" class="img-cover">
-        </figure>
-
-        <div class="card-content">
-
-          <button class="icon-btn small" aria-label="Add to favorite" data-ripple data-toggle-btn>
-
-            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
-
-            <div class="state-layer"></div>
-          </button>
-        </div>
-
-<a href="#" class="state-layer"></a>
-
-      </div>
-
-
-
-    </div>
-
-    
-<div class="column">
-
-
-  <div class="card grid-item" data-ripple>
-
-    <figure class="card-banner" style="--width:160; --height:121;">
-    
-    <img src="card-media-1.jpg" width="160" height="121" loading="lazy" alt="card-media-1" class="img-cover">
-    </figure>
-
-    <div class="card-content">
-
-      <button class="icon-btn small" aria-label="Add to favorite" data-ripple data-toggle-btn>
-
-        <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
-
-        <div class="state-layer"></div>
-      </button>
-    </div>
-
-<a href="#" class="state-layer"></a>
-
-  </div>
-
-
-  <div class="card grid-item" data-ripple>
-
-    <figure class="card-banner" style="--width:160; --height:121;">
-    
-    <img src="card-media-1.jpg" width="160" height="121" loading="lazy" alt="card-media-1" class="img-cover">
-    </figure>
-
-    <div class="card-content">
-
-      <button class="icon-btn small" aria-label="Add to favorite" data-ripple data-toggle-btn>
-
-        <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
-
-        <div class="state-layer"></div>
-      </button>
-    </div>
-
-<a href="#" class="state-layer"></a>
-
-  </div>
-
-
-  <div class="card grid-item" data-ripple>
-
-    <figure class="card-banner" style="--width:160; --height:121;">
-    
-    <img src="card-media-1.jpg" width="160" height="121" loading="lazy" alt="card-media-1" class="img-cover">
-    </figure>
-
-    <div class="card-content">
-
-      <button class="icon-btn small" aria-label="Add to favorite" data-ripple data-toggle-btn>
-
-        <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
-
-        <div class="state-layer"></div>
-      </button>
-    </div>
-
-<a href="#" class="state-layer"></a>
-
-  </div>
-
-
-  
 </div>
+    
+  </div>
+
+</section>
+
+
+<!-- Popular videos  -->
+
+
+<section class="section popular-video" aria-labelledby="featured-label">
+
+  <div class="container">
+
+    <h2 class="title-large section-title" id="popular-video-label">Popular Videos</h2>
+
+    <div class="media-grid" data-video-grid>
+
+      <div class="card video grid-item">
+
+<div class="card-banner" style="--width: 160; --height: 118">
+  <video poster="" muted loop class="image-cover" data-video>
+    
+    <source src="video-banner-1.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div class="card-content">
+
+  <button class="icon-btn small" aria-label="Add to favorite" data-ripple>
+    
+<span class="material-symbols-outlined leading-icon" aria-hidden="true">favorite</span>
+
+<div class="state-layer"></div>
+
+  </button>
+</div>
+
+<span class="card-badge"><span class="material-symbols-outlined" aria-hidden="true">play_arrow</span></span>
+
+      </div>
 
     </div>
 
 <div class="overlay-btn">
 
-  <a href="photos.html" class="btn btn-primary" data-ripple>
+  <a href="videos.html" class="btn btn-primary" data-ripple>
 
     <span class="label-large text">Explore More</span>
 

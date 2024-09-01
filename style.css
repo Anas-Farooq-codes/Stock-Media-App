@@ -288,6 +288,7 @@ a {
 }
 
 img {
+
   height: auto;
 }
 
@@ -521,6 +522,23 @@ button:disabled {
   letter-spacing: -0.5px;
 }
 
+
+a.logo img {
+
+  width: 160px;
+}
+
+
+[data-theme="dark"] .logo .light,
+[data-theme="light"] .logo .dark {
+  display: none;
+}
+[data-theme="dark"] .logo .dark,
+[data-theme="light"] .logo .light {
+  display: block;
+}
+
+
 .divider {
   height: 1px;
   max-width: 100%;
@@ -552,6 +570,7 @@ button:disabled {
   grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
 gap: var(--column-gap);
 
+overflow: hidden;
 
 
 }
@@ -584,6 +603,54 @@ gap: var(--column-gap);
   background-image: linear-gradient(0deg, var(--background) 0%, transparent 100%);
   z-index: 1;
 }
+
+.skeleton {
+  background-color: var(--surface-container-highest);
+  border-radius: var(--radius-medium);
+  -webkit-border-radius: var(--radius-medium);
+  -moz-border-radius: var(--radius-medium);
+  -ms-border-radius: var(--radius-medium);
+  -o-border-radius: var(--radius-medium);
+  aspect-ratio: 2/3;
+  animation: skeleton-loading 1000ms linear infinite alternate;
+  -webkit-animation: skeleton-loading 1000ms linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+
+  0% {
+
+    opacity: 0.5;
+  }
+
+  100% {
+
+    opacity: 1;
+  }
+}
+
+.card-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  background-color: var(--secondary-container);
+  color: var(---on-secondary-container);
+  border-radius: var(--radius-small);
+  -webkit-border-radius: var(--radius-small);
+  -moz-border-radius: var(--radius-small);
+  -ms-border-radius: var(--radius-small);
+  -o-border-radius: var(--radius-small);
+}
+
+.card-badge .material-symbols-outlined {
+
+  font-size: 1.8rem;
+}
+
 
 /*-----------------------------------*\
   #COMPONENT
@@ -933,6 +1000,7 @@ height: 32px;
   font-variation-settings: "FILL" 1;
 }
 
+
 /**
  * Button
  */
@@ -1042,6 +1110,10 @@ height: 32px;
   --state-layer-bg: var(--heart);
 }
 
+.card.video {
+
+  background-color: var(--surface-container-highest);
+}
 /**
  * Menu
  */
@@ -1300,6 +1372,12 @@ height: 32px;
 /*-----------------------------------*\
   #CURATED PHOTOS & POPULAR VIDEO
 \*-----------------------------------*/
+
+:where(.featured-photo, .popular-video) .column {
+
+  margin-block-end: -800px;
+}
+
 
 /*-----------------------------------*\
   #COLLECTION
