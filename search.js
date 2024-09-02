@@ -7,6 +7,7 @@ import { ripple } from "./ripple.js";
 import { addEventOnElements } from "./event.js";
 import { segment } from "./segment_btn.js";
 import { updateUrl } from "./updateUrl.js";
+import { urlDecode } from "./urlDecode.js";
 
 /**
  * Search view toggle in small devices
@@ -115,3 +116,11 @@ for (let i = 0; i < historyLen && i <= 5; i++) {
 
     $searchList.appendChild($listItem);
 }
+
+/**
+ * Show searched value in search field after reload
+ */
+
+const /** @type {Object} */ search = urlDecode(window.location.search.slice(1));
+
+if (search.query) $searchField.value = search.query;

@@ -7,7 +7,6 @@
 
 import { urlEncode } from "./urlEncode.js";
 
-
 /**
  * 
  * @param {*} filterObj filter object
