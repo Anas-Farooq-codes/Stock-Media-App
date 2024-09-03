@@ -9,6 +9,7 @@ import { gridInit, updateGrid } from "../../masonry_grid.js";
 import { photoCard } from "../../photo_card.js";
 import { updateUrl } from "../../updateUrl.js";
 import { urlDecode } from "../../urlDecode.js";
+import { filter } from "../../filter.js";
 
 /**
  * Show filter bar if searched anything
@@ -22,7 +23,15 @@ $filterBar.style.display = window.location.search ? "flex" : "none";
  * Init filter
  */
 
-// const /** {NodeList} */ $filterWrappers = document.querySelectorAll("[data-filter]");
+const /** {NodeList} */ $filterWrappers = document.querySelectorAll("[data-filter]");
+
+$filterWrappers.forEach($filterWrapper => {
+
+  filter($filterWrapper, window.filterObj, (newObj) => {
+
+    
+  })
+})
 
 // filterWrapper
 
