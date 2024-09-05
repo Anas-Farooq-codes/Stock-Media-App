@@ -16,4 +16,10 @@ export const menu = function ($menuWrapper, callback) {
     addEventOnElements($menuTogglers, "click", () => {
         $menu.classList.toggle("expanded");
     });
+
+addEventOnElements($menuItems, "click", function ()  {
+    $menu.classList.remove("expanded");
+    if (callback) callback(this.dataset.menuItem);
+});
+
 }
