@@ -74,3 +74,17 @@ if (!window.localStorage.getItem("favorite")) {
 
     window.localStorage.setItem("favorite", JSON.stringify(favoriteObj));
 }
+
+/**
+ * Page transition
+ */
+
+window.addEventListener("loadstart", function() {
+
+    document.body.style.opacity = "0";
+});
+
+window.addEventListener("DOMContentLoaded", function() {
+
+ document.body.style.opacity = "1";
+})

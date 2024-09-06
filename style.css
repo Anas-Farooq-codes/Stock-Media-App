@@ -322,18 +322,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
-  transition: opacity var(--motion-duration-medium-2)
-    var(--motion-easing-linear);
-  -webkit-transition: opacity var(--motion-duration-medium-2)
-    var(--motion-easing-linear);
-  -moz-transition: opacity var(--motion-duration-medium-2)
-    var(--motion-easing-linear);
-  -ms-transition: opacity var(--motion-duration-medium-2)
-    var(--motion-easing-linear);
-  -o-transition: opacity var(--motion-duration-medium-2)
-    var(--motion-easing-linear);
-  /* opacity: 0; */
+  transition: opacity var(--motion-duration-medium-2)    var(--motion-easing-linear);
+  -webkit-transition: opacity var(--motion-duration-medium-2)    var(--motion-easing-linear);
+  -moz-transition: opacity var(--motion-duration-medium-2)    var(--motion-easing-linear);
+  -ms-transition: opacity var(--motion-duration-medium-2)    var(--motion-easing-linear);
+  -o-transition: opacity var(--motion-duration-medium-2)    var(--motion-easing-linear);
+  opacity: 0;
 }
 
 button:disabled {
@@ -1032,16 +1026,11 @@ height: 72px;
 .navigation.show {
   width: var(--navigation-drawer-width);
   visibility: visible;
-  transition: var(--motion-duration-long)
-    var(--motion-easing-emphasized-decelerate);
-  -webkit-transition: var(--motion-duration-long)
-    var(--motion-easing-emphasized-decelerate);
-  -moz-transition: var(--motion-duration-long)
-    var(--motion-easing-emphasized-decelerate);
-  -ms-transition: var(--motion-duration-long)
-    var(--motion-easing-emphasized-decelerate);
-  -o-transition: var(--motion-duration-long)
-    var(--motion-easing-emphasized-decelerate);
+  transition: var(--motion-duration-long)    var(--motion-easing-emphasized-decelerate);
+  -webkit-transition: var(--motion-duration-long);
+  -moz-transition: var(--motion-duration-long);
+  -ms-transition: var(--motion-duration-long);
+  -o-transition: var(--motion-duration-long);
 }
 
 .navigation-header {
@@ -1049,6 +1038,7 @@ height: 72px;
   align-items: center;
   gap: 16px;
   padding-block: 8px 12px;
+  margin-block: 16px;
 }
 
 .navigation-header,
@@ -1762,7 +1752,7 @@ display: grid;
 
   height: 588px;
   display: grid;
-  grid-template-columns: 1fr max-content;
+gap: 30px;
   place-items: center;
 
 }
