@@ -64,7 +64,7 @@ client.photos.detail(photoId, data => {
 
         $downloadMenu.innerHTML += `
             <a href="${value}" download class="menu-item" data-ripple data-menu-item>
-                <span class="label large-text">${key}</span>
+                <span class="label-large text">${key}</span>
                 <div class="state-layer"></div>
             </a>
         `;
@@ -95,7 +95,7 @@ client.photos.detail(photoId, data => {
             });
         } else {
             $loader.style.display = "none";
-            $photoGrid.innerHTML = "<p>No similar photo found.</p>";
+            $photoGrid.innerHTML = "<p>No similar photos found.</p>";
         }
     });
 });
