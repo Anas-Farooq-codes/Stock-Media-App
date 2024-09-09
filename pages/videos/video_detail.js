@@ -1,19 +1,20 @@
 
-"use strict";
-
 // IMPORTS 
+
 import {client} from "../../api.js";
 import {ripple} from "../../ripple.js";
 import {menu} from "../../menu.js";
 import {favorite} from "../../favorite.js";
 
 // Add ripple effect
+
 const /** @type {NodeList} */ $rippleElems = document.querySelectorAll("[data-ripple]");
 $rippleElems.forEach($rippleElem => ripple($rippleElem));
 
 /**
  * Page transition
  */
+
 window.addEventListener("loadstart", function() {
     document.body.style.opacity = "0";
 });
@@ -23,6 +24,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 /**Menu Toggle */
+
 const /** {Node List} */ $menuWrappers = document.querySelectorAll("[data-menu-wrapper]");
 $menuWrappers.forEach($menuWrapper => {
     menu($menuWrapper);
@@ -38,35 +40,34 @@ $favoriteBtn.classList[favoriteVideos[videoId] ? "add" : "remove"]("active");
 favorite($favoriteBtn, "videos", videoId);
 
 // Render details data 
-
 const /** {NodeElement} */ $detailWrapper = document.querySelector("[data-detail-wrapper]");
 const /** {NodeElement} */ $downloadLink = document.querySelector("[data-download-link]");
 const /** {NodeElement} */ $downloadMenu = document.querySelector("[data-download-menu]");
 
 client.videos.detail(videoId, data => {
+
     console.log(data);
 
     const {
         width,
         height,
         image,
-        user: { name: author },
-video_files
+        user: { name: author},
+        video_files
     } = data;
 
     const /** {Object} */ hdVideo = video_files.find(item => item.quality === "hd");
-
-    const { file_type, link } = hdVideo;
-
+    const { file_type, link} = hdVideo;
 
     $downloadLink.href = link;
 
-    video_files.forEach(item => {
+   video_files.forEach(item => {
         const {
-width,
-height,
-quality,
-link
+
+            width,
+            height,
+            quality,
+            link
         } = item;
 
         $downloadMenu.innerHTML += `
@@ -81,20 +82,15 @@ link
     });
 
     $detailWrapper.innerHTML = `
+        
 
     <div class="detail-banner" style="aspect-ratio: ${width} / ${height};">
-    
     <video poster="${image}" controls class="img-cover" data-video>
-    
     <source src="${link}" type="${file_type}">
-
-    
     </video>
-    
     </div>
-    
+
     <p class="title-small">Video By <span class="color-primary">${author}</span></p>
-    
+
     `;
 });
-
