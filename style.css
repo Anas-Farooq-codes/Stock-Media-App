@@ -1870,7 +1870,6 @@ gap: 30px;
 .top-app-bar .logo { margin-inline-end: 0;}
 
 .top-app-bar .search-open {
-
   display: none;
 }
 
@@ -1997,9 +1996,8 @@ width: 40%;
 /* Footer  */
 
 .footer-card {
-
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 4fr 1fr;
   gap: 24px;
   align-items: flex-end;
 }
@@ -2143,7 +2141,7 @@ display: none;
 
 
 }
-}
+
 
 /* Responsive for larger than 1400px screen  */
 
@@ -2153,7 +2151,29 @@ display: none;
 
 .banner-card {height: 560px;}
 
-}
+
 
 .banner-card .card-content { padding:  84px;}
+
+}
+
+/* Grid  */
+
+.media-grid {
+
+  --column-count: 4;
+  --column-gap: 12px;
+  
+}
+
+.collection-grid {
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+column-gap: 24px;
+
+}
+
+}
+
 

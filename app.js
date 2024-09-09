@@ -14,7 +14,7 @@ const /** {NodeElement} */ $photoGrid = document.querySelector("[data-photo-grid
 
 $photoGrid.innerHTML = `<div class="skeleton"></div>`.repeat(18);
 
-client.photos.curated({ page: 1, per_page: 24 }, data => {
+client.photos.curated({ page: 1, per_page: 48 }, data => {
     $photoGrid.innerHTML = "";
     const photoGrid = gridInit($photoGrid);
 
@@ -31,7 +31,7 @@ const /** {NodeElement} */ $videoGrid = document.querySelector("[data-video-grid
 
 $videoGrid.innerHTML = `<div class="skeleton"></div>`.repeat(18);
 
-client.videos.popular({ per_page: 20 }, data => {
+client.videos.popular({ per_page: 24 }, data => {
     $videoGrid.innerHTML = "";
     const videoGrid = gridInit($videoGrid);
 
@@ -50,7 +50,7 @@ client.videos.popular({ per_page: 20 }, data => {
 
 const /** {NodeElement} */ $collectionGrid = document.querySelector("[data-collection-grid]");
 
-client.collections.featured( { per_page: 18}, data => {
+client.collections.featured( { per_page: 24}, data => {
 
     data.collections.forEach(collection => {
 
