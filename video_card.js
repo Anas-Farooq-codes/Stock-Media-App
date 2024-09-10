@@ -27,7 +27,7 @@ export const videoCard = (video) => {
 
     $card.innerHTML = `
         <div class="card-banner" style="--width: ${width}; --height: ${height}">
-            <video poster="${image}" muted loop preload="none" class="image-cover" data-video>
+            <video poster="${image}" muted loop preload="none" class="img-cover" data-video>
                 <source src="${link}" type="${file_type}">
             </video>
         </div>

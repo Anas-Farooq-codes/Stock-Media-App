@@ -523,13 +523,9 @@ a.logo img {
 }
 
 
-[data-theme="dark"] .logo .light,
-[data-theme="light"] .logo .dark {
+[data-theme="dark"] .logo-light,
+[data-theme="light"] .logo-dark {
   display: none;
-}
-[data-theme="dark"] .logo .dark,
-[data-theme="light"] .logo .light {
-  display: block;
 }
 
 
