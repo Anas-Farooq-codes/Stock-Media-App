@@ -88,3 +88,28 @@ window.addEventListener("DOMContentLoaded", function() {
 
  document.body.style.opacity = "1";
 })
+
+// LOADER 
+
+const preloader = document.getElementById("preloader");
+
+
+function hideLoader() {
+
+
+    setTimeout(() => {
+        preloader.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }, 1000);
+}
+
+
+function showLoader() {
+    preloader.style.display = 'grid';
+    document.body.style.overflow = 'hidden'; 
+}
+
+showLoader();
+
+
+window.addEventListener('load', hideLoader);
