@@ -1982,9 +1982,10 @@ display: none;
 display: grid;
 }
 
-.detail .top-app-bar .logo {
+[data-theme="dark"] .detail .logo-dark,
+[data-theme="light"] .detail .logo-light {
 
-  display: block;
+display: block;
 }
 
 .detail .top-app-bar {

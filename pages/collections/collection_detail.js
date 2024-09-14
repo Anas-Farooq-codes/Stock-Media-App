@@ -40,7 +40,7 @@ const loadCollection = function (page) {
             let /** {NodeElement} */ $card;
 
             switch (item.type.toLowerCase()) {
-                case "photos":
+                case "photo":
                     $card = photoCard(item);
                     break;
                 case "video":

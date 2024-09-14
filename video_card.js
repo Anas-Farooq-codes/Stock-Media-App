@@ -23,7 +23,7 @@ export const videoCard = (video) => {
     const /** {NodeElement} */ $card = document.createElement("div");
     $card.classList.add("card", "grid-item", "video");
 
-    const /** {Object} */ favoriteObj = JSON.parse(window.localStorage.getItem("favorite")) || { videos: {} };
+    const favoriteObj = JSON.parse(window.localStorage.getItem("favorite")) || { videos: {} };
 
     $card.innerHTML = `
         <div class="card-banner" style="--width: ${width}; --height: ${height}">
@@ -32,7 +32,7 @@ export const videoCard = (video) => {
             </video>
         </div>
         <div class="card-content">
-            <button class="icon-btn small ${favoriteObj.videos && favoriteObj.videos[id] ? "active" : ""}" aria-label="Add to favorite" data-ripple data-favorite-btn>
+        <button class="icon-btn small ${favoriteObj.videos?.[id] ? "active" : ""}" aria-label="Add to favorite" data-ripple data-favorite-btn>
                 <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
                 <div class="state-layer"></div>
             </button>

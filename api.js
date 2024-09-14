@@ -86,7 +86,7 @@ export const /** {Object} */ client = {
      * @param {Function} callback Callback function
      */
     detail(id, callback) {
-      fetchData(`${root.videos}${id}`, callback);
+      fetchData(`${root.videos}videos/${id}`, callback);
     }
   },
 

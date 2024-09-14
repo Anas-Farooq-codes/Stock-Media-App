@@ -69,7 +69,7 @@ if (window.location.search.slice(1)) {
 if (!window.localStorage.getItem("favorite")) {
     const /** @type {Object} */ favoriteObj = {
         photos: {},
-        video: {}
+        videos: {}
     };
 
     window.localStorage.setItem("favorite", JSON.stringify(favoriteObj));
