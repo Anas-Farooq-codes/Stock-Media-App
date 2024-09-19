@@ -1053,6 +1053,8 @@ height: 32px;
   -ms-border-radius: var(--radius-full);
   -o-border-radius: var(--radius-full);
   overflow: hidden;
+  margin-block: 24px;
+
 }
 
 .btn-segment .material-symbols-outlined {

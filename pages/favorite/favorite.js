@@ -8,44 +8,46 @@ import { photoCard } from "../../photo_card.js";
 /**
  * Favorite segment button
  */
-
 const /** {NodeElement} */ $favoriteSegment = document.querySelector("[data-segment='favorite']");
-let /** { String } */ favType = "photos";
+let /** {String} */ favType = "photos";
 
-
-segment($favoriteSegment, segmentValue => {
-    favType = segmentValue;
-
-    $favGrid.innerHTML = "";
-    favGrid = gridInit($favGrid);
-    loadFav(favType, favGrid);
-});
-
-/**
- * Load favorite items
- */
-
-
-const $favGrid = document.querySelector("[data-fav-grid]");
+// Initialize the grid container
+const /** {NodeElement} */ $favGrid = document.querySelector("[data-fav-grid]");
 let favGrid = gridInit($favGrid);
-const favData = JSON.parse(window.localStorage.getItem("favorite"));
+
 
 const loadFav = function (type, favGridItem) {
+    const favData = JSON.parse(window.localStorage.getItem("favorite"));
+
+    if (!favData || !favData[type]) {
+        return; 
+    }
+
     Object.values(favData[type]).forEach(item => {
         let /** {NodeElement} */ $card;
 
         switch (type) {
             case "photos":
-                $card = photoCard(item);
+                $card = photoCard(item); // Create a photo card
                 break;
             case "videos":
-                $card = videoCard(item);
+                $card = videoCard(item); // Create a video card
                 break;
         }
 
+      
         updateGrid($card, favGridItem.columnsHeight, favGridItem.$columns);
     });
-}
+};
 
-// Initial load
-loadFav(favType, $favGrid);
+// Segment button handler
+segment($favoriteSegment, segmentValue => {
+    favType = segmentValue; 
+
+    $favGrid.innerHTML = ""; 
+    favGrid = gridInit($favGrid); 
+    loadFav(favType, favGrid);
+});
+
+// Initial load of favorite items
+loadFav(favType, favGrid);
