@@ -4,7 +4,6 @@ import { gridInit, updateGrid } from "../../masonry_grid.js";
 import { segment } from "../../segment_btn.js";
 import { videoCard } from "../../video_card.js";
 import { photoCard } from "../../photo_card.js";
-import { favorite } from "../../favorite.js";
 
 /**
  * Favorite segment button
@@ -13,21 +12,23 @@ import { favorite } from "../../favorite.js";
 const /** {NodeElement} */ $favoriteSegment = document.querySelector("[data-segment='favorite']");
 let /** { String } */ favType = "photos";
 
-let /** {NodeElement} */ $favGrid = document.querySelector("[data-fav-grid]");
-const /** {Object} */ favData = JSON.parse(window.localStorage.getItem("favorite"));
 
 segment($favoriteSegment, segmentValue => {
     favType = segmentValue;
 
     $favGrid.innerHTML = "";
-    $favGrid = gridInit($favGrid);
-
-    loadFav(favType, $favGrid); // Reload favorites after re-initializing the grid
+    favGrid = gridInit($favGrid);
+    loadFav(favType, favGrid);
 });
 
 /**
  * Load favorite items
  */
+
+
+const $favGrid = document.querySelector("[data-fav-grid]");
+let favGrid = gridInit($favGrid);
+const favData = JSON.parse(window.localStorage.getItem("favorite"));
 
 const loadFav = function (type, favGridItem) {
     Object.values(favData[type]).forEach(item => {
