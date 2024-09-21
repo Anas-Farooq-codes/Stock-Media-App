@@ -2359,7 +2359,11 @@ display: none;
   margin-inline: auto;
 }
 
-.media-grid { --column-gap: 16px;}
+/* Grid  */
+
+
+  .media-grid { --column-gap: 16px;
+    --column-count: 4;}
 
 
 .collection-grid {
@@ -2409,14 +2413,6 @@ display: none;
 
 
 
-/* Grid  */
-
-.media-grid {
-
-  --column-count: 4;
-  --column-gap: 12px;
-  
-}
 
 .collection-grid {
 
